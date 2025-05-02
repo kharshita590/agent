@@ -11,6 +11,7 @@ import random
 import os
 import json
 import dotenv
+from fastapi.middleware.cors import CORSMiddleware
 dotenv.load_dotenv()
 PRICE_PREDICTION_API_URL = os.getenv("LIGHT_API","https://your-api.onrender.com" )
 LLM_API_URL = os.getenv("LLM_API_URL", "https://fallback.ngrok-free.app/get_advice")
